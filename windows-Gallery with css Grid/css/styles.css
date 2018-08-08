@@ -1,0 +1,53 @@
+:root {
+    --first-color: steelblue;
+    --second-color: lightgreen;
+    --third-color: lightyellow;
+}
+
+
+.w-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, minmax(1fr, 2fr));
+    height: 500px;
+    margin: auto;
+    width: 70vw;
+    grid-gap: 2px;
+    margin-top: 100px;
+}
+
+.w-gallery-item {
+    background-color: var(--second-color);
+    grid-column: 1 / 3;
+     grid-row: 1 / 5;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+}
+
+.w-gallery-item:nth-child(2) {
+   background-color: var(--third-color);
+   grid-column: 3 / 5;
+   grid-row: 1 / 5;
+    
+}
+
+.w-gallery-item:nth-child(3) {
+   background-color: var(--third-color);
+   grid-column: 1 / 3;
+   grid-row: 5 / 9; 
+}
+
+.w-gallery-item:nth-child(4) {
+   background-color: var(--second-color);
+   grid-column:3 / 5;
+   grid-row: 5 / 9;
+}
+
+.w-gallery-item:nth-child(5) {
+   background-color: var(--first-color);
+   grid-column: 2 / 4;
+   grid-row: 3 / 7;
+   z-index: 1;
+}
